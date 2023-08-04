@@ -1,5 +1,4 @@
 "use client";
-import Head from "next/head";
 import { useState, useContext, useEffect } from "react";
 import { financeContext } from "@/lib/store/finance-context";
 import { authContext } from "@/lib/store/auth-context";
@@ -44,9 +43,11 @@ if(!user){
 
   return (
     <>
-      <Head>
-        <title>Expense-Tracker App</title>
-      </Head>
+      <header>
+        <title>
+          Albert's Web App
+        </title>
+      </header>
 
       {/* Add Income Modal */}
       <AddIncomeModal
