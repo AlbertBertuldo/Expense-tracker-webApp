@@ -1,5 +1,5 @@
 "use client";
-
+import Head from "next/head";
 import { useState, useContext, useEffect } from "react";
 import { financeContext } from "@/lib/store/finance-context";
 import { authContext } from "@/lib/store/auth-context";
@@ -39,11 +39,15 @@ export default function Home() {
   }, [expenses, income]);
 
 if(!user){
-  return <SignIn/>
+  return <SignIn />;
 }
 
   return (
     <>
+      <Head>
+        <title>Expense-Tracker App</title>
+      </Head>
+
       {/* Add Income Modal */}
       <AddIncomeModal
         show={showAddIncomeModal}
@@ -93,6 +97,7 @@ if(!user){
 
         {/* Chart Section */}
         <section className="py-6">
+          <a id="stats"/>
           <h3 className="text-2xl">Expense Chart</h3>
           <div className="w-11/12 mx-auto">
             <Doughnut
