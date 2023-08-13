@@ -63,7 +63,7 @@ if(!user){
 
       <main className="container max-w-2xl px-6 mx-auto">
         <section className="py-3">
-          <small className="text-gray-400 text-md">My Balance</small>
+          <small className="text-white text-md">My Balance</small>
           <h2 className="text-4xl font-bold">{currencyFormatter(balance)}</h2>
         </section>
 
